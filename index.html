@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Информация</a>
-            </li>
-            <li>
-              <a href="#">Фото и видео</a>
-            </li>
-            <li>
-              <a href="#">Карта штата</a>
-            </li>            
-            <li>
-              <a href="hotels.html">Гостиницы</a>
-            </li>
-          </ul>
-          <img src="https://via.placeholder.com/1200x70" alt="Логотип">
-        </nav>
+    <header class="main-header wrap">
+      <nav class="main-navigation">
+				<ul class="nav-list">
+          <li class="list">
+            <a href="#">Информация</a>
+          </li>
+          <li class="list">
+            <a href="#">Фото и видео</a>
+          </li>
+          <li class="list">
+            <a href="#">Карта штата</a>
+          </li>            
+          <li class="list">
+            <a href="hotels.html">Гостиницы</a>
+          </li>
+        </ul>
+        <img src="img/logo.png" width="138" height="70" alt="Логотип сайта Седоны">
+      </nav>
     </header>
-    <main>
-      <section>        
-        <p>Welcome to the georgios</p>
-        <h1>Sedona</h1>
-        <p>"Because the Grand Canyon sucks!"</p>
+    <main class="content wrap">
+      <section class="welcome-sedona">
+        <img src="img/background-photo.jpg" width="456" height="359" alt="Добро пожаловать в великий город Седона">        
+        <h1>Sedona</h1>        
         <p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>          
       </section>
-      <section>       
+      <section class="sedona-advantage">       
         <h2>Преимущества Седоны</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         <div class="advantage">        
           <h3>Настоящий городок</h3>
           <p>-N1-</p>
           <p>Седона не атракцион для туристов, там течет своя жизнь</p>        
-          <img src="https://via.placeholder.com/800x256" alt="">
+          <img src="img/background-view-of-sedona.jpg" width="800" height="256" alt="Атмосфера города Седона">
         </div>          
         <div class="reason">         
           <h3>Жильё</h3>
@@ -52,11 +54,11 @@
           <h3>Сувениры</h3>
           <p>Не только китайского, но и местного производства!</p>
         </div>
-        <div class="advantage left-image">        
+        <div class="advantage-left-image">        
           <h3>Мост дьявола</h3>
           <p>-N2-</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>        
-          <img src="https://via.placeholder.com/800x256" alt="">
+          <img src="img/background-sedona.jpg" width="800" height="256" alt="Пейзаж Седоны">
         </div>
         <div class="advantage">        
           <h3>Небольшая площадь</h3>
@@ -74,33 +76,34 @@
           <p>Большинство едет в гранд каньон и толпится там</p> 
         </div>
       </section>
-      <section>
+      <section class="hotel-order">
         <h2>Заказ гостиницы</h2>
-        <p>Заинтересовались?</p>
-        <p>Укажите предпологаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d418800.0408085849!2d-111.86105649005053!3d34.909578301509335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sus!4v1599995222440!5m2!1sru!2sus" width="1199" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <form action="" method="get">
-          <label for="arrival">Дата заезда: <input type="date" name="arrival"></label>            
-          <label for="departure">Дата выезда: <input type="date" name="departure"></label>              
-          <label for="adult">Взрослые: <input type="number" min="2" name="adult"></label>
-          <label for="children">Дети: <input type="number" min="1" name="children"></label>
+        <p class="interest">Заинтересовались?</p>
+        <p class="date">Укажите предпологаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d418800.0408085849!2d-111.86105649005053!3d34.909578301509335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sus!4v1599995222440!5m2!1sru!2sus" width="1199" height="594" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <form class="search-hostels" action="https://echo.htmlacademy.ru/" method="get">
+          <p>Поиск гостиницы в Седоне</p>
+          <label class="arrival">Дата заезда: <input type="text" name="arrival">24 апреля 2017</label>            
+          <label class="departure">Дата выезда: <input type="text" name="departure">4 июля 2017</label>              
+          <label class="adult">Взрослые: <input type="number" min="2" name="adult"></label>
+          <label class="children">Дети: <input type="number" min="1" name="children"></label>
           <input type="submit" value="Найти">                 
         </form>                   
       </section>
     </main>
-    <footer>
-      <div>
+    <footer class="main-footer wrap">
+      <div class="adress">
         <p>#visitsedona</p>
         <a href="tel:+74956660166">Тел:+7(495)666-01-66</a>
       </div>
-      <div>
+      <div class="social-network">
         <a aria-label="Twitter" href="https://twitter.com/"></a>
         <a aria-label="Facebook" href="https://facebook.com/"></a>
         <a aria-label="YouTube" href="https://youtube.com/"></a>
       </div>
-      <div>
+      <div class="developed">
         <p>Website by</p>
-        <img src="https://via.placeholder.com/115x41" alt="Логотип Html Academy">
+        <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип Html Academy">
       </div>
     </footer>    
   </body>

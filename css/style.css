@@ -1,0 +1,140 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  text-transform: uppercase;}
+
+:root {
+  --basic-dark: #000000;
+  --basic-white: #ffffff;
+  --basic-blue: #81B3D3;
+  --basic-brown: #766458;
+  --basic-gray: #EEEEEE;
+  --basic-pink: #E22F85;
+  --basic-green: #159732;
+}
+
+body {  
+  font-family: "PT Sans","Arial",sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+a { 
+  text-decoration: none;}
+
+.wrap {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}  
+
+.main-navigation img {
+  background-color: var(--basic-blue);
+}
+
+.welcome-sedona img {
+  background-color: var(--basic-blue);
+}
+.advantage img {
+  background-color: var(--basic-brown);
+}
+
+.advantage-left-image {
+  background-color: var(--basic-brown);
+}
+
+.hotel img {
+  background-color: var(--basic-pink);
+}
+
+.motel img {
+  background-color: var(--basic-brown);
+}
+
+.apartments img {
+  background-color: var(--basic-green); 
+}
+
+.list a,
+.arrival,
+.departure,
+.adult,
+.children {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.sedona-advantage p,
+.infrastructure span,
+.housing-type span,
+.price-per-day input,
+.price-per-day button,
+.host-type,
+.host-price,
+.four-stars
+.three-stars,
+.two-stars {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.welcome-sedona p,
+.search-hostels p,
+.search-hostels input,
+.adress p,
+.adress a,
+.found,
+.list-of-result h2 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.sedona-advantage h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.interest {
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.date {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.developed p {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.infrastructure legend,
+.housing-type legend,
+.price-per-day legend {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.search-sort,
+.sort-by-price,
+.sort-by-type,
+.sort-by-rating {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.booking {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+}
+

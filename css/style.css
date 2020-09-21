@@ -8,8 +8,6 @@
   --basic-blue: #81B3D3;
   --basic-brown: #766458;
   --basic-gray: #EEEEEE;
-  --basic-pink: #E22F85;
-  --basic-green: #159732;
 }
 
 body {  
@@ -26,33 +24,6 @@ a {
   max-width: 1200px;
   width: 100%;
 }  
-
-.main-navigation img {
-  background-color: var(--basic-blue);
-}
-
-.welcome-sedona img {
-  background-color: var(--basic-blue);
-}
-.advantage img {
-  background-color: var(--basic-brown);
-}
-
-.advantage-left-image {
-  background-color: var(--basic-brown);
-}
-
-.hotel img {
-  background-color: var(--basic-pink);
-}
-
-.motel img {
-  background-color: var(--basic-brown);
-}
-
-.apartments img {
-  background-color: var(--basic-green); 
-}
 
 .list a,
 .arrival,

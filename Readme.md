@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Максим Шеин](https://up.htmlacademy.ru/htmlcss/29/user/907509).
-* Наставник: `<a href="https://htmlacademy.ru/profile/id324297">Данила Прокопенко</a>`.
+* Наставник: [Данила Прокопенко](https://htmlacademy.ru/profile/id324297).
 
 ---
 

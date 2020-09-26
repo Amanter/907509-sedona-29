@@ -25,6 +25,8 @@ a {
   width: 100%;
 }  
 
+/*header*/
+
 .list a,
 .arrival,
 .departure,
@@ -34,6 +36,17 @@ a {
   line-height: 26px;
   font-weight: 700;
 }
+
+.advantage {
+  display: grid;
+  grid-template-columns: 1fr 2fr;  
+}
+
+.advantage-left-image {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
 
 .sedona-advantage p,
 .infrastructure span,

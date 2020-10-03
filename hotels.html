@@ -10,8 +10,8 @@
 	<body>
 		<header class="main-header wrap">
 			<nav class="main-navigation">
-				<ul class="nav-list">
-					<a href="index.html"><img src="img/logo.svg" width="138" height="70" alt="Логотип сайта Седоны"></a>
+				<a class="logo" href="index.html"><img src="img/logo.svg" width="138" height="70" alt="Логотип сайта Седоны"></a>
+				<ul class="nav-list">					
 					<li class="list">
 						<a href="#">Информация</a>
 					</li>
@@ -29,7 +29,7 @@
 		</header>
 		<main class="content wrap">
 			<section class="hotels">
-				<h1>Заказ гостиницы</h1>
+				<h1 class="visually-hidden">Заказ гостиницы</h1>
 				<form action="https://echo.htmlacademy.ru/" method="post">                
 					<fieldset class="infrastructure">
 						<legend>Инфраструктура:</legend>
@@ -85,9 +85,9 @@
 				<div class="search">
 					<p class="found">Найдено: 3</p>
 					<p class="search-sort">Сортировка:</p>
-					<a class="sort-by-price" href=""></a>
-					<a class="sort-by-type" href=""></a>
-					<a class="sort-by-rating" href=""></a>
+					<a class="sort-by-price" href="">По цене:</a>
+					<a class="sort-by-type" href="">По типу:</a>
+					<a class="sort-by-rating" href="">По рейтингу:</a>
 				</div>
 				<div class="sort-pointer">
 					<a class="up" href=""></a>
@@ -96,20 +96,24 @@
 				<ul class="list-of-result">
 					<li class="hotel">
 						<img src="img/resort.jpg" width="135" height="90" alt="Гостиница Resort & Spa">
-						<h2>Amara resort & spa</h2>
-						<p class="host-type">Гостиница</p>
-						<a class="more-details" href="#">Подробнее</a>
-						<p class="host-price">От 4000 р.</p>
-						<a class="booking" href="#">Забронировать</a>
-						<span class="four-stars">рейтинг 4 звезды</span>
-						<p class="host-rating">Рейтинг: 8,5</p>
+					  <div class="amara">
+							<h2>Amara resort & spa</h2>
+							<p class="host-type">Гостиница</p>
+							<p class="host-price">От 4000 р.</p>
+							<a class="more-details" href="#">Подробнее</a>							
+							<a class="booking" href="#">Забронировать</a>
+				  	</div>
+			  		<div class="amara-rate">
+							<span class="four-stars">рейтинг 4 звезды</span>
+				  		<p class="host-rating">Рейтинг: 8,5</p>
+				  	</div>
 					</li>
 					<li class="motel">
 						<img src="img/inn.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
 						<h2>Desert Quail inn</h2>
 						<p class="host-type">Мотель</p>
-						<a class="more-details" href="#">Подробнее</a>
 						<p class="host-price">От 3000 р.</p>
+						<a class="more-details" href="#">Подробнее</a>						
 						<a class="booking" href="#">Забронировать</a>
 						<span class="three-stars">рейтинг 3 звезды</span>
 						<p class="host-rating">Рейтинг: 8,9</p>
@@ -118,8 +122,8 @@
 						<img src="img/house.jpg" width="135" height="90" alt="Аппартаменты Villas at Poco Diablo">
 						<h2>Villas at poco diablo</h2>
 						<p class="host-type">Аппартаменты</p>
-						<a class="more-details" href="#">Подробнее</a>
 						<p class="host-price">От 2000 р.</p>
+						<a class="more-details" href="#">Подробнее</a>						
 						<a class="booking" href="#">Забронировать</a>
 						<span class="two-stars">рейтинг 2 звезды</span>
 		    		<p class="host-rating">Рейтинг: 9,2</p>

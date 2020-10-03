@@ -17,15 +17,38 @@ body {
 }
 
 a { 
-  text-decoration: none;}
+  text-decoration: none;
+}
 
 .wrap {
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;
+  padding: 0 40px;
 }  
 
 /*header*/
+
+.main-navigation {
+  height: 70px;
+  position: relative;
+  margin-bottom: 5px;
+  width: 1054px;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  min-height: 70px;
+  padding: 0;
+  list-style: none;
+}
 
 .list a,
 .arrival,
@@ -37,14 +60,118 @@ a {
   font-weight: 700;
 }
 
-.advantage {
-  display: grid;
-  grid-template-columns: 1fr 2fr;  
+/*main*/
+
+.visually-hidden {
+  display: none;
 }
 
-.advantage-left-image {
+.welcome-sedona {
+height: 510px;
+background: url("../img/background-photo.jpg") no-repeat;
+text-align: center;
+}
+
+.welcome-sedona img {
+  margin-top: 75px;
+}
+
+.sedona-text {
+  margin-top: 124px;
+  background: url("../img/rectangle.svg") no-repeat 50% 50%;
+}
+
+.sedona-advantage {
+  text-align: center;
+}
+
+.main-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.advantage-right-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.advantage-left-image { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+/*main-hotels*/
+
+.hotels {
+  background: url(../img/background.png);
+}
+
+.hotels form {
+  display: flex; 
+}
+
+.infrastructure {
+  width: 135px;
+  margin-left: 72px;
+}
+
+.housing-type {
+  width: 136px;
+  margin-left: 119px;
+}
+
+.price-per-day {
+  width: 317px;  
+  margin: 0 73px 0 348px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  height: 86px;
+}
+
+.list-of-result {
+  display: flex;
+  flex-direction: column;  
+}
+
+.hotel,
+.motel,
+.apartments {
+  height: 150px;
+  display: flex;
+}
+
+.hotel img {
+  margin: auto 0 auto 0;
+}
+
+.amara {
+  display: flex;
+  width: 258px;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+.amara h2,
+.amara p,
+.amara a {
+  height: 27px;
+  margin: 0; 
+}
+
+.amara p {
+  width: 76px;
+}
+
+.amara-rate {
+  display: flex;
+  flex-direction: column;
+  margin-right: 73px;
+  margin-left: auto;
 }
 
 
@@ -122,3 +249,14 @@ a {
   font-weight: 700;
 }
 
+/*footer*/
+
+/*.main-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}*/
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+}

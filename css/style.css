@@ -8,6 +8,11 @@
   --basic-blue: #81B3D3;
   --basic-brown: #766458;
   --basic-gray: #EEEEEE;
+  --basic-gray-text: #CACACA;
+  --basic-dark-gray: #6A6A6A;
+  --basic-light-gray: #E5E5E5;
+  --basic-special: #ABABAB;
+  --basic-very-light-gray: #F2F2F2;
 }
 
 body {  
@@ -352,7 +357,6 @@ text-align: center;
   background-color: var(--basic-blue);
 }
 
-
 /*main-hotels*/
 
 .hotels {
@@ -365,60 +369,381 @@ text-align: center;
   height: 218px;
 }
 
-.infrastructure {
+.infrastructure {  
   width: 135px;
   margin-left: 72px;
+  border: 0;
+  padding: 0;
+  color: var(--basic-white);
+}
+.infrastructure legend {
+  padding: 27px 0 23px 0;  
+}
+
+.infrastructure-type {
+  display: flex;
+  flex-direction: column;  
+}
+
+.infrastructure-type label {
+  position: relative;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.checkbox + span {
+  padding-left: 40px;
+}
+
+.checkbox {
+ display: none;
+}
+
+.checkbox:checked + span::before {
+  display: block;
+}
+
+.checkbox:disabled + span::after {
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 23px;
+  top: 2px;
+  left: 1px;
+  border: 2px solid var(--basic-dark-gray);
+  border-radius: 2px;     
+}
+
+.checkbox:disabled + span::before {  
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 12px;
+  top: 3px;
+  left: 5px;
+  box-shadow: inset 4px -4px 0 0 var(--basic-dark-gray);  
+  transform: rotate(-45deg);  
+}
+ 
+.checkbox + span::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 12px;
+  top: 3px;
+  left: 5px;
+  box-shadow: inset 4px -4px 0 0 var(--basic-white); 
+  transform: rotate(-45deg);  
+  display: none;
+}
+
+.checkbox + span::after {  
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 23px;
+  top: 2px;
+  left: 1px;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;  
 }
 
 .housing-type {
-  width: 136px;
-  margin-left: 119px;
+  width: 135px;
+  border: 0;
+  padding: 0; 
+  margin-left: 117px;
+  color: var(--basic-white);
+}
+
+.housing {
+  display: flex;
+  flex-direction: column;
+}
+
+.housing-type legend { 
+  padding: 26px 0 25px 0;
+}
+
+.housing label {
+  position: relative;
+  padding-bottom: 20px;
+  cursor: pointer;
 }
 
 .price-per-day {
-  width: 317px;  
-  margin: 0 73px 0 348px;
+  display: flex;
+  flex-direction: column;
+  width: 343px;
+  border: 0;
+  padding: 0;  
+  margin: 0 73px 0 346px;
+  color: var(--basic-white);
 }
 
-.search {
+.price-per-day legend {  
+  padding: 26px 0 13px 0;
+}
+
+.price-controls {
+  position: relative;
+  width: 317px;
+  height: 35px;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  margin-bottom: 21px;
+}
+
+.min-price input,
+.max-price input {
+  width: 60px;
+  color: inherit;
+  background: transparent;
+  border: 0;  
+}
+
+.min-price {
+  padding-left: 66px;
+}
+
+.max-price {
+  padding-left: 66px;
+}
+
+.max-price::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 2px;
+  top: 6px;
+  left: 158px;
+  background: var(--basic-white);
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 34px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--basic-special);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: -10px; 
+  width: 19px;
+  height: 19px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--basic-special);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--basic-special);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 253px;
+}
+
+.price-per-day button {
+  margin-left: 85px;
+  padding-bottom: 4px;
+  text-align: center;
+  height: 35px;
+  width: 136px;
+  background: transparent;
+  color: inherit;
+  text-transform: uppercase;
+  border: 2px solid var(--basic-white);
+}
+
+.search { 
   display: flex;
-  align-items: center;
-  height: 86px;
+  align-items: center;  
+  margin: 29px 0 0 0;
+  height: 59px;
+  list-style: none;
+  border-bottom: 1px solid var(--basic-light-gray);
+}
+
+.search li:nth-child(1) {  
+  padding: 0 0 31px 33px;
+}
+
+.search li:nth-child(2) {
+  padding: 0 0 36px 46px;
+}
+
+.search li:nth-child(3) {
+  padding: 0 0 36px 40px;  
+}
+
+.search li:nth-child(4),
+.search li:nth-child(5) {
+  padding: 0 0 36px 30px;
+}
+
+.sort-by-price {
+  color: var(--basic-blue);
+}
+
+.sort-by-type {
+  color: var(--basic-gray-text);
+  border-bottom: 1px dotted var(--basic-blue);
+}
+
+.sort-by-rating {
+  color: var(--basic-gray-text);
+  border-bottom: 1px dotted var(--basic-blue);
+}
+
+.searching-result {
+  position: relative;
+}
+
+.sort-pointer {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 12px;
+  right: 75px;
+  width: 31px;   
+}
+
+.up,
+.down {
+  width: 0;
+  margin: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.down {
+  border-top: 10px solid var(--basic-blue);
+}
+
+.up {
+  border-bottom: 10px solid var(--basic-gray-text);
 }
 
 .list-of-result {
   display: flex;
   flex-direction: column;  
+  padding: 0;
+  margin: 0;
+ 
+}
+
+.list-of-result li {
+  height: 151px; 
+  border-bottom: 1px solid var(--basic-light-gray);
 }
 
 .hotel,
 .motel,
-.apartments {
-  height: 150px;
+.apartments { 
   display: flex;
 }
 
-.hotel img {
-  margin: auto 0 auto 0;
+.hotel img,
+.motel img,
+.apartments img {
+  width: 208px;
+  padding-left: 72px;
+  margin: auto 0;
 }
 
-.amara {
-  display: flex;
-  width: 258px;
-  align-items: center;
-  flex-wrap: wrap; 
+.amara,
+.desert-quail-inn,
+.villas-at-poco-diablo {
+  width: 288px;    
 }
 
 .amara h2,
-.amara p,
-.amara a {
-  height: 27px;
+.motel h2,
+.apartments h2 {
+  padding: 24px 0 0 28px;  
   margin: 0; 
 }
 
-.amara p {
-  width: 76px;
+.desert-quail-inn h2 {
+  width: 210px;
 }
+
+.amara > p,
+.desert-quail-inn > p,
+.villas-at-poco-diablo > p {
+  display: inline-block;
+  width: 114px;
+  padding: 4px 0 13px 27px; 
+  margin: 0;
+}
+
+.more-details {
+ display: inline-block;
+ width: 110px;
+ height: 26px;
+ margin-left: 28px;
+ text-align: center;
+ color: var(--basic-white);
+ background: var(--basic-blue);
+}
+
+.booking {
+  display: inline-block;
+  width: 142px;
+  height: 26px;
+  margin-left: 2px;
+  text-align: center;
+  color: var(--basic-white);
+  background: var(--basic-brown);
+}
+
+.hotel div:last-child,
+.motel div:last-child,
+.apartments div:last-child {
+  position: relative;
+  margin: 0 72px 0 auto;
+}
+
+.host-rating {
+  width: 110px;
+  height: 27px;
+  text-align: center;  
+  background: var(--basic-very-light-gray);
+  margin-top: 92px;
+}
+
+.four-stars {
+ position: absolute;
+ width: 10px;
+ height: 10px;
+ top: 0;
+ left: 0;
+ background:  url(../img/twitter.svg) no-repeat 50% 50%
+}
+
+.three-stars {
+ position: absolute;
+}
+
+.two-stars {
+ position: absolute;
+}
+
 
 .amara-rate {
   display: flex;
@@ -509,10 +834,8 @@ text-align: center;
 .price-per-day input,
 .price-per-day button,
 .host-type,
-.host-price,
-.four-stars
-.three-stars,
-.two-stars {
+.host-price
+ {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -572,7 +895,8 @@ text-align: center;
   font-weight: 400;
 }
 
-.booking {
+.booking,
+.more-details {
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;

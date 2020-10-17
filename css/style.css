@@ -27,8 +27,6 @@ html {
 }
 
 .page {
-  /*display: grid;
-  grid-template-rows: min-content 1fr min-content;*/
   min-height: 100%;
   font-family: "PT Sans","Arial",sans-serif;
   font-size: 14px;
@@ -64,9 +62,7 @@ a {
   position: absolute;
   left: 50%;
   top: 0;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -86,7 +82,7 @@ a {
 }
 
 .nav-list li:nth-child(2) {
-  padding-left: 2px;
+  margin-left: 2px;
   margin-right: 152px;
 }
 
@@ -121,15 +117,14 @@ a {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
 .welcome-sedona {
 position: relative;
-height: 510px;
+padding-bottom: 68px;
 background-image: url("../img/background-photo.jpg");
 text-align: center;
 background-color: var(--basic-brown);
@@ -209,8 +204,7 @@ background-color: var(--basic-brown);
 }
 
 .advantage {      
-  padding-top: 48px;
-  padding-bottom: 53px;
+  padding: 48px 10px 54px 10px;
 }
 
 .advantage p {
@@ -226,8 +220,7 @@ background-color: var(--basic-brown);
 }
 
 .reason { 
-  padding-top: 138px;
-  padding-bottom: 67px;
+  padding: 138px 5px 67px 5px;
 }
 
 .reason p {
@@ -235,15 +228,15 @@ background-color: var(--basic-brown);
 }
 
 .main-grid .reason:nth-child(1) {
-  background: url(../img/icon1.svg) no-repeat 50% 60px;
+  background: url(../img/icon1.svg) no-repeat 50% 59px;
 }
 
 .main-grid .reason:nth-child(2) {
-  background: url(../img/icon3.svg) no-repeat 50% 60px;
+  background: url(../img/icon3.svg) no-repeat 50% 61px;
 }
 
 .main-grid .reason:nth-child(3) {
-  background: url(../img/icon2.svg) no-repeat 50% 60px;
+  background: url(../img/icon2.svg) no-repeat 50% 56px;
 }
 
 .hotel-order {
@@ -254,17 +247,24 @@ background-color: var(--basic-brown);
 
 .hotel-order img {
   display: block;
+  background-color: var(--basic-light-gray);
 }
 
 .interest {
-  margin: 0; 
-} 
+  display: block;
+  padding: 0 300px 0;
+  margin: 0;
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
 
 .date {
   margin: 0 auto; 
   width: 435px;
   padding-top: 34px;
-  padding-bottom: 45px;
+  padding-bottom: 44px;
 }
 
 /*form*/
@@ -281,7 +281,7 @@ background-color: var(--basic-brown);
 
 .btn-hotel {
   width: 568px;
-  padding: 30px 0 30px 0;
+  padding: 30px 10px;
   margin: 0;
   border: 0;  
   text-align: center;   
@@ -311,15 +311,16 @@ background-color: var(--basic-brown);
   grid-template-columns: 1fr 1fr;
 }
 
-.departure {
+.arrival-and-departure label {
   position: relative;
   padding-top: 4px;
+}
+
+.departure {  
   padding-right: 21px;  
 }
 
-.arrival {
-  position: relative;
-  padding-top: 4px;
+.arrival {  
   padding-right: 24px;  
 }
 
@@ -361,19 +362,16 @@ background-color: var(--basic-brown);
   margin: 0;
 }
 
-.calendar-top:hover .calendar-fill {  
+.calendar-top:focus,
+.calendar-bottom:focus {
+  outline: none;
+} 
+
+.calendar:hover .calendar-fill {  
   fill: var(--basic-dark);
 }
 
-.calendar-top:active .calendar-fill {  
-  fill: var(--basic-blue);
-}
-
-.calendar-bottom:hover .calendar-fill {  
-  fill: var(--basic-dark);
-}
-
-.calendar-bottom:active .calendar-fill {  
+.calendar:active .calendar-fill {  
   fill: var(--basic-blue);
 }
 
@@ -391,16 +389,6 @@ background-color: var(--basic-brown);
   position: absolute;
 }
 
-.adult button:first-child {
-  left: 121px;
-  border: 0;
-}
-
-.adult button:last-child {
-  left: 200px;
-  border: 0;
-}
-
 .children {
   padding: 5px 29px 0 55px;
 }
@@ -415,7 +403,7 @@ background-color: var(--basic-brown);
 .adult-and-children input {
   height: 38px;
   width: 42px;
-  padding-left: 16px;
+  text-align: center;
   font: inherit; 
   border: 0;  
   background-color: var(--basic-gray);
@@ -528,6 +516,10 @@ background-color: var(--basic-brown);
  opacity: 0;
 }
 
+.checkbox:disabled:focus {
+  pointer-events: none;
+}
+
 .checkbox:disabled + span::after {
   position: absolute;
   content: "";
@@ -539,7 +531,18 @@ background-color: var(--basic-brown);
   border-radius: 2px;     
 }
 
-.checkbox:disabled + span::before {  
+.checkbox:disabled:checked + span::after {
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 23px;
+  top: 0;
+  left: 1px;
+  border: 2px solid var(--basic-dark-gray);
+  border-radius: 2px;     
+}
+
+.checkbox:disabled:checked + span::before {  
   box-shadow: inset 4px -4px 0 0 var(--basic-dark-gray);  
   transform: rotate(-45deg);  
 }
@@ -549,7 +552,7 @@ background-color: var(--basic-brown);
   content: "";
   width: 20px;
   height: 12px;
-  top: 3px;
+  top: 0;
   left: 5px;
   transform: rotate(-45deg);     
 }
@@ -572,6 +575,11 @@ background-color: var(--basic-brown);
 .checkbox:checked + span::after {
   border: 0;
  background: url(../img/checkbox-on.svg) no-repeat 1% 8%;
+}
+
+.checkbox:disabled:checked + span::after {
+  border: 0;
+ background: url(../img/checkbox-off.svg) no-repeat 1% 8%;
 }
 
 .price-per-day {
@@ -723,12 +731,7 @@ background-color: var(--basic-brown);
   color: var(--basic-blue);
 }
 
-.sort-by-type {
-  color: rgba(0,0,0,0.3);
-  border-bottom: 1px dotted var(--basic-blue);
-}
-
-.sort-by-rating {
+.sort-by {
   color: rgba(0,0,0,0.3);
   border-bottom: 1px dotted var(--basic-blue);
 }
@@ -769,7 +772,7 @@ background-color: var(--basic-brown);
 }
 
 .down {
-  border-top: 10px solid var(--basic-blue);
+  border-top: 10px solid var(--basic-gray-text);
 }
 
 .up {
@@ -788,9 +791,11 @@ background-color: var(--basic-brown);
   border-bottom: 10px solid var(--basic-blue);
 }
 
-.list-of-result {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.down:active {
+  border-top: 10px solid var(--basic-blue);
+}
+
+.list-of-result { 
   display: flex;
   flex-direction: column;  
   padding: 0;
@@ -814,9 +819,9 @@ background-color: var(--basic-brown);
 .hotel img,
 .motel img,
 .apartments img {
-  width: 208px;
-  padding-left: 73px;
-  margin: auto 0;
+  width: 135px;
+  margin: auto 0 auto 73px;
+  background-color: var(--basic-special-brown);
 }
 
 .amara,
@@ -828,7 +833,7 @@ background-color: var(--basic-brown);
 .amara h2,
 .motel h2,
 .apartments h2 {
-  padding: 24px 0 0 28px;  
+  padding: 24px 0 4px 28px;  
   margin: 0; 
 }
 
@@ -854,7 +859,8 @@ background-color: var(--basic-brown);
 .villas-at-poco-diablo > p {
   display: inline-block;
   width: 114px;
-  padding: 4px 0 0 28px; 
+  padding-left: 28px;
+  vertical-align: top;
   margin: 0;
 }
 
@@ -954,7 +960,6 @@ background-color: var(--basic-brown);
   position: relative;
   margin-top: -121px;
 }
-}
 
 .social-network {
   display: flex;
@@ -1019,7 +1024,8 @@ background-color: var(--basic-brown);
 .adress {
   display: flex;
   flex-direction: column;
-  justify-content: center;  
+  justify-content: center;
+  text-align: center; 
   align-items: center;
   padding: 5px 10px 18px;
 }
@@ -1028,7 +1034,7 @@ background-color: var(--basic-brown);
   display: flex;
   justify-content: center;  
   align-items: center;
-  padding: ;
+  padding: 5px;
 }
 
 .academy span {
@@ -1088,12 +1094,6 @@ background-color: var(--basic-brown);
 .sedona-advantage h3 {
   font-size: 21px;
   line-height: 21px;
-  font-weight: 700;
-}
-
-.interest {
-  font-size: 30px;
-  line-height: 24px;
   font-weight: 700;
 }
 

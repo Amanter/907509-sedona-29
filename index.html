@@ -3,7 +3,7 @@
   <head>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="css/normalize.css">
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style-min.css">
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
@@ -11,7 +11,7 @@
     <div class="shadow">    
       <header class="main-header wrap">
         <nav class="main-navigation">
-          <img class="logo" src="img/logo.svg" width="138" height="70" alt="Логотип сайта Седоны">
+          <a class="logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип сайта Седоны"></a>
           <ul class="nav-list">
             <li class="list">
               <a href="#">Информация</a>
@@ -48,15 +48,15 @@
             <img src="img/background-view-of-sedona.jpg" width="800" height="256" alt="Атмосфера города Седона">  
           </div>          
           <div class="main-grid">
-            <div class="reason">         
+            <div class="reason reason-one">         
               <h3>Жильё</h3>
               <p>Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
             </div>
-            <div class="reason">          
+            <div class="reason reason-two">          
               <h3>Еда</h3>
               <p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>      
             </div>
-            <div class="reason">          
+            <div class="reason reason-three">          
               <h3>Сувениры</h3>
               <p>Не только китайского, но и местного<br> производства!</p>
             </div>
@@ -90,10 +90,9 @@
         <section class="hotel-order">
           <h2 class="visually-hidden">Заказ гостиницы</h2>
           <p class="interest">Заинтересовались?</p>
-          <p class="date">Укажите предпологаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button class="btn-hotel" type="button" aria-label="Кнопка поиска гостиницы">Поиск гостиницы в Седоне</button>
-          <img src="img/map.png" width="1199" height="594" alt="Расположение Седоны на карте">
-          <form class="search-hostels" action="https://echo.htmlacademy.ru/" method="get">      
+          <p class="date">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>          
+          <button class="btn-hotel" type="button" aria-label="Кнопка поиска гостиницы">Поиск гостиницы в Седоне</button>         
+          <form class="search-hostels" action="https://echo.htmlacademy.ru/" method="get">
             <div class="search-filds">
               <div class="arrival-and-departure">
                 <label class="arrival" for="arrival">Дата заезда:</label>
@@ -123,9 +122,10 @@
                 <input type="number" id="children" min="0" name="children" value="0">
                 <button type="button" aria-label="Кнопка увеличения количества детей">+</button> 
               </div>      
-              <button class="btn-search" type="submit" aria-label="Кнопка поиска гостиницы по указанным выше критериям">Найти</button>
+              <button class="btn-search" type="button" aria-label="Кнопка поиска гостиницы по указанным выше критериям">Найти</button>
             </div>                  
-          </form>                 
+          </form>
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d418800.0408085849!2d-111.86105649005053!3d34.909578301509335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sus!4v1599995222440!5m2!1sru!2sus" width="1200" height="586" aria-hidden="false" tabindex="0"></iframe>      
         </section>
       </main>
       <footer class="main-footer footer-index wrap">
@@ -147,6 +147,7 @@
           </a>
         </div>
       </footer>
-    </div>             
+    </div>
+    <script src="js/popup-min.js"></script>               
   </body>
 </html>

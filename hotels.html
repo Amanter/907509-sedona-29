@@ -22,8 +22,8 @@
 						<li class="list">
 							<a href="#">Карта штата</a>
 						</li>            
-						<li class="list">
-							<a href="#">Гостиницы</a>
+						<li class="list list-active">
+							<a>Гостиницы</a>
 						</li>
 					</ul>				
 			</nav>
@@ -35,11 +35,11 @@
 						<fieldset class="field-column">
 							<legend>Инфраструктура:</legend>						
 							<label>
-								<input class="visually-hidden checkbox" type="checkbox" name="swimming-pool" checked disabled>
+								<input class="visually-hidden checkbox" type="checkbox" name="swimming-pool" checked>
 								<span>Бассейн</span>
 							</label>
 							<label>
-								<input class="visually-hidden checkbox" type="checkbox" name="parking" disabled>
+								<input class="visually-hidden checkbox" type="checkbox" name="parking">
 								<span>Парковка</span>
 							</label>
 							<label>
@@ -80,17 +80,19 @@
 					</form>
 				</section>
 				<section class="searching-result">
-					<ul class="search">
-						<li><p class="found">Найдено: 3</p></li>
-						<li><p class="search-sort">Сортировка:</p></li>
-						<li><a class="sort-by-price" href="">По цене</a></li>
-						<li><a class="sort-by sort-by-type" href="">По типу</a></li>
-						<li><a class="sort-by sort-by-rating" href="">По рейтингу</a></li>
-					</ul>
-					<div class="sort-pointer">
-						<a class="up" aria-label="Стрелка сортировки снизу вверх" href=""></a>
-						<a class="down"  aria-label="Стрелка сортировки сверху вниз" href=""></a>
-					</div>
+					<div class="sort-panel">
+						<ul class="search">
+							<li><p class="found">Найдено: 3</p></li>
+							<li><p class="search-sort">Сортировка:</p></li>
+							<li><a class="sort-by-price" href="">По цене</a></li>
+							<li><a class="sort-by sort-by-type" href="">По типу</a></li>
+							<li><a class="sort-by sort-by-rating" href="">По рейтингу</a></li>
+						</ul>
+						<div class="sort-pointer">
+							<a class="up" aria-label="Стрелка сортировки снизу вверх" href=""></a>
+							<a class="down"  aria-label="Стрелка сортировки сверху вниз" href=""></a>
+						</div>
+			  	</div>
 					<ul class="list-of-result">
 						<li class="hotel">
 							<img src="img/resort.jpg" width="135" height="90" alt="Гостиница Resort & Spa">
@@ -102,7 +104,7 @@
 								<a class="booking" href="#">Забронировать</a>
 							</div>
 							<div class="amara-rate">
-								<div class="four-stars" style="width: 92px" aria-label="Рейтинг 4 звезды"></div>
+								<div class="four-stars" style="width: 92px"><span class="visually-hidden">Рейтинг 4 звезды</span></div>
 								<p class="host-rating">Рейтинг: 8,5</p>
 							</div>
 						</li>
@@ -116,7 +118,7 @@
 								<a class="booking" href="#">Забронировать</a>
 							</div>						
 							<div>
-								<div class="three-stars" style="width: 68px" aria-label="Рейтинг 3 звезды"></div>
+								<div class="three-stars" style="width: 68px"><span class="visually-hidden">Рейтинг 3 звезды</span></div>
 								<p class="host-rating">Рейтинг: 8,9</p>
 							</div>
 						</li>
@@ -130,7 +132,7 @@
 								<a class="booking" href="#">Забронировать</a>
 							</div>
 							<div>
-								<div class="two-stars" style="width: 43px" aria-label="Рейтинг 2 звезды"></div>
+								<div class="two-stars" style="width: 43px"><span class="visually-hidden">Рейтинг 2 звезды</span></div>
 								<p class="host-rating">Рейтинг: 9,2</p>
 							</div>
 						</li>

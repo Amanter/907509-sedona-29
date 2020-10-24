@@ -53,9 +53,9 @@ a {
 
 /*header*/
 
-.main-navigation {
-  height: 55px;
-  position: relative;  
+.main-navigation {  
+  position: relative;
+
 }
 
 .logo {
@@ -67,10 +67,9 @@ a {
 }
 
 .nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  min-height: 70px;
+  flex-wrap: wrap;
+  min-height: 55px;
   padding: 0;
   list-style: none;
   margin: 0 72px;  
@@ -83,7 +82,7 @@ a {
 
 .nav-list li:nth-child(2) {
   margin-left: 2px;
-  margin-right: 152px;
+  margin-right: 150px;
 }
 
 .nav-list li:nth-child(3) {
@@ -107,6 +106,10 @@ a {
   color: rgba(0,0,0,0.3);
 }
 
+.list.list-active a {
+  color: var(--basic-special-brown);
+}
+
 /*main*/
 
 .visually-hidden {
@@ -126,6 +129,8 @@ a {
 position: relative;
 padding-bottom: 68px;
 background-image: url("../img/background-photo.jpg");
+background-size: cover;
+background-position: 50% 50%;
 text-align: center;
 background-color: var(--basic-brown);
 }
@@ -227,15 +232,15 @@ background-color: var(--basic-brown);
   padding: 6px 50px 0 50px;
 }
 
-.main-grid .reason:nth-child(1) {
+.reason-one {
   background: url(../img/icon1.svg) no-repeat 50% 59px;
 }
 
-.main-grid .reason:nth-child(2) {
+.reason-two {
   background: url(../img/icon3.svg) no-repeat 50% 61px;
 }
 
-.main-grid .reason:nth-child(3) {
+.reason-three {
   background: url(../img/icon2.svg) no-repeat 50% 56px;
 }
 
@@ -259,7 +264,6 @@ background-color: var(--basic-brown);
   font-weight: 700;
 }
 
-
 .date {
   margin: 0 auto; 
   width: 435px;
@@ -267,18 +271,25 @@ background-color: var(--basic-brown);
   padding-bottom: 44px;
 }
 
+.map {
+  border: 0;
+}
+
 /*form*/
 
 .search-hostels {
   position: absolute;
-  left: 26.4%;
-  top: 33%;
+  left: 26.4%;  
   width: 568px;  
   margin: 0 auto; 
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-  background-color: var(--basic-white);
+  background-color: var(--basic-white);   
 }
 
+.modal-close { 
+  display: none;
+}
+  
 .btn-hotel {
   width: 568px;
   padding: 30px 10px;
@@ -461,13 +472,15 @@ background-color: var(--basic-brown);
 
 .hotels {
   position: relative;
-  padding-bottom: 3px;
+  padding-bottom: 2px;
   background-image: url(../img/background.png);
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .hotels form {  
   display: flex;
-  padding: 26px 0 0;  
+  padding: 27px 0 0;  
 }
 
 .field-column {    
@@ -528,7 +541,7 @@ background-color: var(--basic-brown);
   top: 2px;
   left: 1px;
   border: 2px solid var(--basic-dark-gray);
-  border-radius: 2px;     
+  border-radius: 2px;    
 }
 
 .checkbox:disabled:checked + span::after {
@@ -556,6 +569,10 @@ background-color: var(--basic-brown);
   left: 5px;
   transform: rotate(-45deg);     
 }
+
+.field-column label:focus {
+  border: 1px solid var(--basic-dark);
+}   
 
 .checkbox:checked + span::before {
   box-shadow: inset 4px -4px 0 0 var(--basic-white);   
@@ -601,7 +618,7 @@ background-color: var(--basic-brown);
   height: 35px;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 }
 
 .min-price input,
@@ -705,9 +722,13 @@ background-color: var(--basic-brown);
   display: -ms-flexbox; 
   display: flex;
   align-items: center;  
-  margin: 9px 0 0 0; 
-  list-style: none;
-  border-bottom: 1px solid var(--basic-light-gray);
+  margin: 8px 0 0 0; 
+  list-style: none;  
+}
+
+.sort-panel {
+  display: flex;
+  justify-content: space-between;
 }
 
 .search li:nth-child(1) {  
@@ -751,15 +772,15 @@ background-color: var(--basic-brown);
   position: relative;
 }
 
-.sort-pointer {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.sort-pointer { 
   display: flex;
   justify-content: space-between;
   top: 31px;
   right: 74px;
-  width: 31px;   
+  width: 31px;
+  align-items: center;
+  margin-right: 74px;
+  margin-top: 6px;
 }
 
 .up,
@@ -795,16 +816,24 @@ background-color: var(--basic-brown);
   border-top: 10px solid var(--basic-blue);
 }
 
+.up:focus {
+  outline: none;
+}
+
+.down:focus {
+  outline: none;
+}
+
 .list-of-result { 
   display: flex;
   flex-direction: column;  
   padding: 0;
   margin: 0;
- 
+  border-top: 1px solid var(--basic-light-gray);
 }
 
 .list-of-result li {
-  height: 151px; 
+  padding: 9px 5px 15px 0px;
   border-bottom: 1px solid var(--basic-light-gray);
 }
 
@@ -820,7 +849,7 @@ background-color: var(--basic-brown);
 .motel img,
 .apartments img {
   width: 135px;
-  margin: auto 0 auto 73px;
+  margin: 22px 0 auto 73px;
   background-color: var(--basic-special-brown);
 }
 
@@ -833,7 +862,7 @@ background-color: var(--basic-brown);
 .amara h2,
 .motel h2,
 .apartments h2 {
-  padding: 24px 0 4px 28px;  
+  padding: 15px 0 3px 28px;  
   margin: 0; 
 }
 
@@ -867,7 +896,7 @@ background-color: var(--basic-brown);
 .more-details {
  display: inline-block;
  width: 111px;
- height: 26px;
+ padding: 3px 5px 3px 5px;
  margin-left: 28px;
  margin-top: 15px;
  text-align: center;
@@ -879,7 +908,7 @@ background-color: var(--basic-brown);
 .booking {
   display: inline-block;
   width: 142px;
-  height: 26px;
+  padding: 3px 5px 3px 5px;
   margin-left: 2px;
   margin-top: 15px;
   text-align: center;
@@ -910,21 +939,21 @@ background-color: var(--basic-brown);
 .motel div:last-child,
 .apartments div:last-child {
   position: relative;
-  margin: 0 72px 0 auto;
+  margin: 0 67px 0 auto;
 }
 
 .host-rating {
   width: 110px;
-  height: 27px;
+  padding: 1px 5px 2px 5px;
   text-align: center;  
   background-color: var(--basic-very-light-gray);
-  margin-top: 92px;
+  margin-top: 84px;
 }
 
 .four-stars {
   position: absolute;  
   height: 18px;
-  top: 29px;
+  top: 20px;
   right: 0px;
   background: url(../img/star.svg) repeat 0 50%;
 }
@@ -932,7 +961,7 @@ background-color: var(--basic-brown);
 .three-stars {
   position: absolute;  
   height: 18px;
-  top: 28px;
+  top: 20px;
   right: 0px;
   background: url(../img/star.svg) repeat 0 50%;
 }
@@ -940,7 +969,7 @@ background-color: var(--basic-brown);
 .two-stars {
   position: absolute;  
   height: 18px;
-  top: 29px;
+  top: 20px;
   right: 0px;
   background: url(../img/star.svg) repeat 0 50%;
 }

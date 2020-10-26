@@ -277,21 +277,32 @@ background-color: var(--basic-brown);
 
 /*form*/
 
-.search-hostels {
-  position: absolute;
-  left: 26.4%;  
-  width: 568px;  
-  margin: 0 auto; 
-  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-  background-color: var(--basic-white);   
+.search-hostels-wrapper {
+  position: relative;
+  width: 568px;
+  margin: 0 auto;
 }
 
-.modal-close { 
-  display: none;
+.search-hostels {
+  max-height: 1000px;
+  position: absolute;
+  left: 0;  
+  top: 100%;
+  width: 100%;     
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  background-color: var(--basic-white);
+  transition: max-height .3s linear;
+  overflow: hidden;
 }
   
+.modal-close {
+ max-height: 0;
+}
+
 .btn-hotel {
-  width: 568px;
+  z-index: 3;
+  position: relative;
+  width: 100%;
   padding: 30px 10px;
   margin: 0;
   border: 0;  
@@ -311,8 +322,7 @@ background-color: var(--basic-brown);
 }
 
 .search-filds {
-  height: 395px;
-  padding: 55px;
+  padding: 55px 55px 0 55px;
 }
 
 .arrival-and-departure {
@@ -365,7 +375,7 @@ background-color: var(--basic-brown);
   position: absolute;
   width: 21px;
   height: 23px;
-  top: 33%;
+  top: 32%;
   left: 85%;
   right: 0; 
   border: 0;
@@ -404,11 +414,10 @@ background-color: var(--basic-brown);
   padding: 5px 29px 0 55px;
 }
 
-.adult-and-children {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.adult-and-children {  
   display: flex;
   padding-bottom: 55px;
+  padding-left: 56px;
 }
 
 .adult-and-children input {
@@ -445,6 +454,7 @@ background-color: var(--basic-brown);
 .btn-search {
   width: 458px;
   height: 58px;
+  margin-bottom: 55px;
   text-align: center;  
   border: 0;  
   color: var(--basic-white);
@@ -1114,7 +1124,8 @@ background-color: var(--basic-brown);
 .found,
 .list-of-result h2,
 .btn-hotel,
-.search-filds button {
+.btn-search,
+.adult-and-children button {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;

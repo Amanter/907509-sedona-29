@@ -290,6 +290,7 @@ background-color: var(--basic-brown);
   background-color: var(--basic-white);
   transition: max-height .3s linear;
   overflow: hidden;
+  z-index: 3;
 }
   
 .modal-close {
@@ -409,6 +410,7 @@ background-color: var(--basic-brown);
 
 .adult-result {
   display: flex;
+  flex-wrap: wrap;
  }
 
 .adult-left {
@@ -678,8 +680,7 @@ background-color: var(--basic-brown);
 .price-per-day button {
   margin-left: 85px;
   padding: 4px 4px 7px;
-  text-align: center;
-  height: 35px;
+  text-align: center;  
   width: 136px;
   background-color: transparent;
   color: inherit;

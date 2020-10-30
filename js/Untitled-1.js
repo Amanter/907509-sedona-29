@@ -23,8 +23,5 @@ searchHostels.addEventListener("submit", function (evt) {
   if (!arrival.value || !departure.value || !adult.value || !children.value) {
     evt.preventDefault();
     searchHostels.classList.add("modal-error");
-    setTimeout(function tick() {
-      searchHostels.classList.remove("modal-error");
-    }, 500);
   }
-});
+}

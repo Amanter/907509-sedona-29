@@ -55,7 +55,6 @@ a {
 
 .main-navigation {  
   position: relative;
-
 }
 
 .logo {
@@ -126,13 +125,13 @@ a {
 }
 
 .welcome-sedona {
-position: relative;
-padding-bottom: 68px;
-background-image: url("../img/background-photo.jpg");
-background-size: cover;
-background-position: 50% 50%;
-text-align: center;
-background-color: var(--basic-brown);
+  position: relative;
+  padding-bottom: 68px;
+  background-image: url("../img/background-photo.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  text-align: center;
+  background-color: var(--basic-brown);
 }
 
 .welcome-sedona img {  
@@ -150,7 +149,6 @@ background-color: var(--basic-brown);
 }
 
 .main-grid {
-  display: -ms-grid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -160,10 +158,7 @@ background-color: var(--basic-brown);
 }
 
 .advantage-right-image {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: var(--basic-blue);  
+  display: flex;
 }
 
 .advantage-right-image .advantage {
@@ -175,10 +170,8 @@ background-color: var(--basic-brown);
 }
 
 .advantage-left-image { 
-  display: -ms-grid; 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: var(--basic-blue);
+  display: flex;
+  justify-content: space-between;
 }
 
 .sedona-advantage-text {
@@ -206,7 +199,21 @@ background-color: var(--basic-brown);
 }
 
 .advantage {      
-  padding: 48px 10px 53px;
+  padding: 48px 10px 55px;
+  width: 400px;
+  background-color: var(--basic-blue);
+}
+
+.advantage-img {
+  position: relative;
+}
+
+.advantage-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 800px;
 }
 
 .advantage p {
@@ -222,7 +229,7 @@ background-color: var(--basic-brown);
 }
 
 .reason { 
-  padding: 138px 5px 69px 5px;
+  padding: 138px 5px 69px;
 }
 
 .reason p {
@@ -244,7 +251,7 @@ background-color: var(--basic-brown);
 .hotel-order {
   position: relative; 
   text-align: center;
-  padding-top: 57px;
+  padding-top: 54px;
 }
 
 .hotel-order img {
@@ -254,7 +261,6 @@ background-color: var(--basic-brown);
 
 .interest {
   display: block;
-  padding: 0 300px 0;
   margin: 0;
   font-size: 30px;
   line-height: 24px;
@@ -294,7 +300,7 @@ background-color: var(--basic-brown);
 }
   
 .modal-close {
- max-height: 0;
+  max-height: 0;
 }
 
 .btn-hotel {
@@ -423,7 +429,6 @@ background-color: var(--basic-brown);
   margin: 0;
 }
 
-
 .adult-and-children button {
   border: 0;
   width: 34px;
@@ -463,6 +468,32 @@ background-color: var(--basic-brown);
   background-color: var(--basic-white);
   border: 2px solid var(--basic-gray);
   outline: none;  
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 /*main-hotels*/
@@ -548,18 +579,16 @@ background-color: var(--basic-brown);
 }
 
 .checkbox:disabled:checked + span::before {  
-  box-shadow: inset 4px -4px 0 0 var(--basic-dark-gray);  
-  transform: rotate(-45deg);  
+  background: url(../img/shape-disabled.svg) no-repeat;
 }
  
 .checkbox + span::before {
   position: absolute;
   content: "";
-  width: 20px;
-  height: 12px;
+  width: 23px;
+  height: 17px;
   top: 0;
-  left: 5px;
-  transform: rotate(-45deg);     
+  left: 5px;   
 }
 
 .checkbox:focus + span::after {
@@ -567,7 +596,7 @@ background-color: var(--basic-brown);
 }   
 
 .checkbox:checked + span::before {
-  box-shadow: inset 4px -4px 0 0 var(--basic-white);   
+  background: url(../img/shape.svg) no-repeat;
 }
 
 .checkbox:checked + span::after {
@@ -689,6 +718,11 @@ background-color: var(--basic-brown);
   border-radius: 2px;
 }
 
+.price-per-day button:hover {
+  color: var(--basic-dark);
+  background-color: var(--basic-white);
+} 
+
 .search { 
   display: flex;
   flex-wrap: wrap;
@@ -791,14 +825,6 @@ background-color: var(--basic-brown);
 .down.active,
 .down:active {
   border-top-color: var(--basic-blue);
-}
-
-.up:focus {
-  outline: none;
-}
-
-.down:focus {
-  outline: none;
 }
 
 .list-of-result { 

@@ -579,7 +579,7 @@ a {
 }
 
 .checkbox:disabled:checked + span::before {  
-  background: url(../img/shape-disabled.svg) no-repeat;
+  background: url(../img/shape-disabled-svg.svg) no-repeat;
 }
  
 .checkbox + span::before {
@@ -596,7 +596,7 @@ a {
 }   
 
 .checkbox:checked + span::before {
-  background: url(../img/shape.svg) no-repeat;
+  background: url(../img/shape-svg.svg) no-repeat;
 }
 
 .checkbox:checked + span::after {
